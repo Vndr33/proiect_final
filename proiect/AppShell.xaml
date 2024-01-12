@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="proiect.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:proiect"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Healthy Lifestyle Diary"
+    
+    BackgroundColor="#A6DFEF"
+    
+    FlyoutBackgroundColor="#F9FEF7"
+    FlyoutIcon="menu_icon.png">
+
+    <Shell.FlyoutHeader>
+        <Border BackgroundColor="#A6DFEF"
+                StrokeThickness="0">
+            <Grid ColumnDefinitions="auto, *"
+                  Padding="25"
+                  ColumnSpacing="20">
+
+                <Image Grid.Column="0"
+                       Source="heather_icon.png"
+                       Aspect="AspectFill"
+                       HeightRequest="100"
+                       WidthRequest="100"/>
+                <Label Grid.Column="1"
+                       Text="Healty Lifestyle Diary"
+                       VerticalTextAlignment="Center"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="#497FE3"/>
+            </Grid>
+            
+        </Border>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutContent >
+        <ScrollView Margin="0" Padding="0" VerticalOptions="Start" >
+            <VerticalStackLayout VerticalOptions="Start">
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                                         Padding="10"
+                                         ColumnSpacing="10"
+                      >
+
+                    <Image Grid.Column="0"
+                           Source="welcom_icon.png"
+                           Aspect="AspectFill"
+                           HeightRequest="25"
+                           WidthRequest="25"/>  
+                    <Label Grid.Column="1"
+                           Text="Acasa"
+                           TextColor="#181C18"
+                           FontSize="16"/>
+                    <Label Grid.Column="2"
+                           Text=">"
+                           Margin="10"
+                           TextColor="#497FE3"
+                           FontAttributes="Bold"
+                           Scale="1.5"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="open_welcome_page"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                         Padding="10"
+                         ColumnSpacing="10">
+
+                    <Image Grid.Column="0"
+                           Source="articol_icon.png"
+                           Aspect="AspectFill"
+                           HeightRequest="25"
+                           WidthRequest="25"/>
+                    <Label Grid.Column="1"
+                           Text="Articole"
+                           TextColor="#181C18"
+                           FontSize="16"/>
+                    <Label Grid.Column="2"
+                           Text=">"
+                           Margin="10"
+                           TextColor="#497FE3"
+                           FontAttributes="Bold"
+                           Scale="1.5"/>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="open_articole_page"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                         Padding="10"
+                         ColumnSpacing="10">
+
+                    <Image Grid.Column="0"
+                           Source="my_page_icon.png"
+                           Aspect="AspectFill"
+                           HeightRequest="25"
+                           WidthRequest="25"/>
+                    <Label Grid.Column="1"
+                           Text="Pagina mea"
+                           TextColor="#181C18"
+                           FontSize="16"/>
+                    <Label Grid.Column="2"
+                           Text=">"
+                           Margin="10"
+                           TextColor="#497FE3"
+                           FontAttributes="Bold"
+                           Scale="1.5"/>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="open_my_page"/>
+                    </Grid.GestureRecognizers>
+                    
+                </Grid>
+
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                         Padding="10"
+                         ColumnSpacing="10">
+
+                    <Image Grid.Column="0"
+                           Source="abou_us_icon.png"
+                           Aspect="AspectFill"
+                           HeightRequest="25"
+                           WidthRequest="25"/>
+                    <Label Grid.Column="1"
+                           Text="About_us"
+                           TextColor="#181C18"
+                           FontSize="16"/>
+                    <Label Grid.Column="2"
+                           Text=">"
+                           Margin="10"
+                           TextColor="#497FE3"
+                           FontAttributes="Bold"
+                           Scale="1.5"/>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="open_about_us_page"/>
+                    </Grid.GestureRecognizers>
+                    
+                </Grid>
+                
+                <Grid ColumnDefinitions="Auto, *, Auto"
+         Padding="10"
+         ColumnSpacing="10">
+
+                    <Image Grid.Column="0"
+           Source="articol_icon.png"
+           Aspect="AspectFill"
+           HeightRequest="25"
+           WidthRequest="25"/>
+                    <Label Grid.Column="1"
+           Text="de proba pt scroll"
+           TextColor="#181C18"
+           FontSize="16"/>
+                    <Label Grid.Column="2"
+           Text=">"
+           Margin="10"
+           TextColor="#497FE3"
+           FontAttributes="Bold"
+           Scale="1.5"/>
+                </Grid>
+
+            </VerticalStackLayout>
+            
+        </ScrollView>
+        
+        
+    </Shell.FlyoutContent>
+
+    <Shell.FlyoutFooter>
+        <Label Text="Copyrights | Healthy Lifestyle @2024"
+               FontSize="12"
+               BackgroundColor="#497FE3"
+               TextColor="#F9FEF7"
+               HorizontalTextAlignment="Center"
+               Padding="0,10"/>
+    </Shell.FlyoutFooter>
+
+    <!--<FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        
+        <ShellContent
+            Title="Welcome"
+            Icon="articol_icon.png"
+            ContentTemplate="{DataTemplate local:pag_welcome}"
+            Route="Home"/>
+        <ShellContent
+            Title="Articole"
+            ContentTemplate="{DataTemplate local:pag_articole}"
+            Route="Articole"/>
+        
+    </FlyoutItem>-->
+
+    <ShellContent
+        Title="Home"
+        Icon="dotnet_bot.png"
+        ContentTemplate="{DataTemplate local:pag_welcome}"
+        Route="MainPage" />
+
+    
+</Shell>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proiect.pag_articole"
+             Title="pag_articole"
+             BackgroundColor="#F9FEF7">
+
+    
+    
+    <FlexLayout Direction="Column">
+
+        <Label Text="Articole pe care le poti citi"
+                 FontSize="30"
+                 FontAttributes="Bold"
+                 TextColor="#181C18"
+                 HorizontalTextAlignment="Center"
+                 FlexLayout.Order="-1"
+               Margin="10"/>
+
+
+
+        <!--<ScrollView  Margin="20"
+              Padding="10" 
+              VerticalOptions="CenterAndExpand" 
+              FlexLayout.Order="2">-->
+
+            
+            <ListView x:Name="lista_articole" HasUnevenRows="true" ItemTapped="listView_ItemTapped" 
+                      >
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <VerticalStackLayout VerticalOptions="Start">
+
+                                <Grid ColumnDefinitions="30, 250, 100,300, 450"
+                                       Padding="10"
+                                       ColumnSpacing="5">
+
+                                    <Image Grid.Column="0"
+                                     Source="articol_icon.png"
+                                     Aspect="AspectFill"
+                                     HeightRequest="25"
+                                     WidthRequest="25"
+                                     Margin="10"/>
+
+                                <Label Grid.Column="1" Text="{Binding Titlu}" FontSize="17" FontAttributes="Bold" TextColor="#181C18"/>
+                                <Label Grid.Column="2" Text="{Binding Autor}" FontSize="17" FontAttributes="Bold" TextColor="#181C18"/>
+                                <Label Grid.Column="3" Text="{Binding Continut}" FontSize="17" FontAttributes="Bold" TextColor="#181C18"/>
+
+                                <Button Grid.Column="4"
+                                        x:Name="editeaza_articol_button"
+                                        Text="Apasa pe articol pentru a edita sau sterge "
+                                        BackgroundColor="#497FE3" 
+                                        TextColor="#F9FEF7"
+                                        Clicked="editeaza_articol_button_clicked">
+                                </Button>
+                                <!--<Button Grid.Column="5"
+                                         x:Name="sterge_articol_button"
+                                         Text="Editeaza articolul "
+                                         BackgroundColor="#497FE3" 
+                                         TextColor="#F9FEF7"
+                                        
+                                         Clicked="sterge_articol_button_clicked">
+                                </Button>-->
+
+                                <!--<Label Grid.Column="3" Text="{Binding Continut}" FontSize="17" FontAttributes="Bold" TextColor="#181C18"/>-->
+                                    
+                                    
+
+                                </Grid>
+
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+        <!--</ScrollView>-->
+
+    </FlexLayout>
+    
+    
+</ContentPage>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proiect.Pages.Flyout_Page.AboutUs"
+             Title="AboutUs"
+            FlyoutLayoutBehavior="Popover">
+    
+    <FlyoutPage.Flyout>
+        
+        <ContentPage Title="articol#2" BackgroundColor="#606C38">
+            <VerticalStackLayout>
+                <Label Text="pagina din flyout"
+                       HorizontalTextAlignment="Center"
+                       Margin="20"
+                       />
+                <Button
+                    x:Name="open_article_page_button"
+                    Text="Articles"
+                    Margin="20"
+                    WidthRequest="10"
+                    Clicked="open_article_page_button_clicked">
+                </Button>
+                <Button
+                     x:Name="open_random_page_button"
+                     Text="random"
+                     Margin="20"
+                     Clicked="open_random_page_button_clicked">
+                </Button>
+            </VerticalStackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                
+                <ContentPage Title="HomePage">
+                    <VerticalStackLayout>
+                        <Label Text="pagina din detalii"
+                               HorizontalTextAlignment="Center"
+                               Margin="20"/>
+                    </VerticalStackLayout>
+                </ContentPage>
+                
+
+
+            </x:Arguments>
+        </NavigationPage>
+            
+    </FlyoutPage.Detail>
+    
+</FlyoutPage>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proiect.pag_my_page"
+             Title="pag_my_page"
+             BackgroundColor="#F9FEF7">
+    
+    <FlexLayout Direction="Column" 
+                
+                AlignContent="SpaceEvenly">
+
+        <VerticalStackLayout Padding="10"  
+                             Margin="100"
+                             VerticalOptions="Center"
+                             >
+
+            <Entry x:Name="titlu_entry_field" Placeholder="Introdu titlul" TextColor="#181C18"  />
+            <Entry x:Name="autor_entry_field" Placeholder="Introdu autorul" TextColor="#181C18" />
+            <Entry x:Name="continut_entry_field" Placeholder="Introdu textul" TextColor="#181C18"/>
+
+            <Button x:Name="save_new_article" Text="Incarca articolul" Clicked="save_new_article_clicked" BorderColor="#497FE3" BackgroundColor="#497FE3" TextColor="#F9FEF7" Margin="10"/>
+            <Button x:Name="open_edit_page" Text="Editeaza un articol" Clicked="open_edit_page_clicked" BorderColor="#497FE3" BackgroundColor="#497FE3" TextColor="#F9FEF7" Margin="10"/>
+            
+        </VerticalStackLayout>
+        <!--ItemTapped="deschide_detalii_articol"-->
+        <!--<ListView x:Name="lista_articole"  HasUnevenRows="True" >
+
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <ViewCell>
+
+                        <VerticalStackLayout Padding="5">
+
+                            <Label Text="{Binding Titlu}" FontSize="17" FontAttributes="Bold" TextColor="#181C18"/>
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Text="{Binding Autor}" TextColor="#181C18"/>
+                                <Label Grid.Column="2" Text="{Binding Continut}" TextColor="#181C18"/>
+
+                            </Grid>
+
+                        </VerticalStackLayout>
+
+                    </ViewCell>
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>-->
+
+       
+
+    </FlexLayout>
+    
+</ContentPage>

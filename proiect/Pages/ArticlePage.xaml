@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proiect.Pages.ArticlePage"
+             Title="ArticlePage"
+             BackgroundColor="#FEFAE0">
+    <VerticalStackLayout>
+        <Label 
+        Text="Articles about a Healthy LifeStyle"
+        FontSize="20"
+        FontAttributes="Bold"
+        Margin="20"
+        TextColor="#BC6C25"
+        HorizontalOptions="Center" />
+
+        <Button 
+            x:Name="close_article_page_button"
+            Text="Home"
+            Margin="20"
+            Clicked="close_article_page_button_clicked">
+        </Button>
+
+    </VerticalStackLayout>
+</ContentPage>

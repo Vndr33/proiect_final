@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proiect.Pages.HomePage"
+             Title="HomePage"
+             BackgroundColor="#FEFAE0">
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Healthy Lifestyle Diary"
+            FontSize="20"
+            FontAttributes="Bold"
+            Margin="20"
+            TextColor="#283618"
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="open_article_page_button"
+            Text="Articles"
+            Margin="20"
+            Clicked="open_article_page_button_clicked">
+            
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>

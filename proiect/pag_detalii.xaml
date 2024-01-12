@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proiect.pag_detalii"
+             Title="pag_detalii"
+              BackgroundColor="#F9FEF7">
+
+    <HorizontalStackLayout>
+        
+        
+
+
+
+        <VerticalStackLayout Padding="10"  
+                             Margin="100"
+                             VerticalOptions="Center">
+            <Entry x:Name="titlu_entry_field" Placeholder="Introdu titlul" TextColor="#181C18"  />
+            <Entry x:Name="autor_entry_field" Placeholder="Introdu autorul" TextColor="#181C18" />
+            <Entry x:Name="continut_entry_field" Placeholder="Introdu textul" TextColor="#181C18"/>
+
+            <HorizontalStackLayout Padding="5"
+                                   Margin="5"
+                                   HorizontalOptions="Center">
+                <Button x:Name="save_update_article" Text="Salveaza modificarile" Clicked="save_update_article_clicked" BorderColor="#497FE3" BackgroundColor="#497FE3" TextColor="#F9FEF7" Margin="5"/>
+                <Button x:Name="no_save_update_article" Text="Renunta" Clicked="no_save_update_article_clicked" BorderColor="#497FE3" BackgroundColor="#497FE3" TextColor="#F9FEF7" Margin="5"/>
+
+            </HorizontalStackLayout>
+           
+        </VerticalStackLayout>
+        
+    </HorizontalStackLayout>
+    
+    
+</ContentPage>
