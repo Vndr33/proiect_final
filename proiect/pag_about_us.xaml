@@ -6,8 +6,22 @@
              BackgroundColor="#F9FEF7">
     <VerticalStackLayout>
         <Label 
-            Text="About us!"
+            Text="Despre noi"
+            FontSize="27"
+            Margin="20"
+            TextColor="#497FE3"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label 
+             Text="Vrei sa afli mai multe? Pune o intrebare!"
+             FontSize="20"
+             Margin="20"
+             TextColor="#497FE3"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center" />
+        <Image
+            Source="about_us_icon.png"
+            HeightRequest="300"
+            WidthRequest="300"/>
     </VerticalStackLayout>
 </ContentPage>
