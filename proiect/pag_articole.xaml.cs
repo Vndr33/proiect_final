@@ -36,11 +36,11 @@ public partial class pag_articole : ContentPage
     private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
         var articol = (Articol)e.Item;
-        var action = await DisplayActionSheet("Doriti sa editati sau sa stergeti articolul? ", "Cancel", null, "Editez articolul", "Sterg articolul");
+        var action = await DisplayActionSheet("Doresti sa iti editezi pagina de jurnal? ", "Anulati", null, "Editez pagina", "Sterg pagina");
 
         switch (action)
         {
-            case "Editez articolul":
+            case "Editez pagina":
                 _editArticleId = articol.Id_articol;
                 var editArticleTitlu = articol.Titlu;
                 var editArticolAutor = articol.Autor;
@@ -49,7 +49,7 @@ public partial class pag_articole : ContentPage
 
 
                 break;
-            case "Sterg articolul":
+            case "Sterg pagina":
                 await _localDbService.Delete(articol);
                 lista_articole.ItemsSource = await _localDbService.GetArticols();
                 break;

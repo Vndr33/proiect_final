@@ -74,7 +74,7 @@
                            HeightRequest="25"
                            WidthRequest="25"/>
                     <Label Grid.Column="1"
-                           Text="Articole"
+                           Text="Jurnalul meu"
                            TextColor="#181C18"
                            FontSize="16"/>
                     <Label Grid.Column="2"
@@ -100,7 +100,7 @@
                            HeightRequest="25"
                            WidthRequest="25"/>
                     <Label Grid.Column="1"
-                           Text="Pagina mea"
+                           Text="Gandurile de azi"
                            TextColor="#181C18"
                            FontSize="16"/>
                     <Label Grid.Column="2"
@@ -126,7 +126,7 @@
                            HeightRequest="25"
                            WidthRequest="25"/>
                     <Label Grid.Column="1"
-                           Text="About_us"
+                           Text="Despre noi"
                            TextColor="#181C18"
                            FontSize="16"/>
                     <Label Grid.Column="2"

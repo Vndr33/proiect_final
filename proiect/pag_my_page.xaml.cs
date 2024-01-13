@@ -24,29 +24,36 @@ public partial class pag_my_page : ContentPage
 			});
 				
 		}
-		else
-		{
-			await _localDbService.Update(new Articol
-			{
-				Id_articol = _editArticleId,
-				Titlu = titlu_entry_field.Text,
-				Autor = autor_entry_field.Text,
-				Continut = continut_entry_field.Text
-			});
+		//else
+		//{
+		//	await _localDbService.Update(new Articol
+		//	{
+		//		Id_articol = _editArticleId,
+		//		Titlu = titlu_entry_field.Text,
+		//		Autor = autor_entry_field.Text,
+		//		Continut = continut_entry_field.Text
+		//	});
 
-			_editArticleId = 0;
-		}
+		//	_editArticleId = 0;
+		//}
 
 		titlu_entry_field.Text = string.Empty;
 		autor_entry_field.Text= string.Empty;
 		continut_entry_field.Text=string.Empty;
 
+		await DisplayAlert("Nota", "Pagina ta de jurnal a fost incarcata cu succes! :)", "Multumesc!");
+
 		//lista_articole.ItemsSource = await _localDbService.GetArticols();
-		Console.WriteLine("am ajuns aici");
+		//Console.WriteLine("am ajuns aici");
 	}
 
-	private async void open_edit_page_clicked(object sender, EventArgs e)
+	private async void open_article_page_clicked(object sender, EventArgs e)
 	{
-
+		await Navigation.PushAsync(new pag_articole(_localDbService));
 	}
+
+	void gata(object sender, EventArgs e)
+	{
+        string text = ((Editor)sender).Text;
+    }
 }      

@@ -13,14 +13,26 @@
                WidthRequest="300"
                Margin="10"/>
         <Label 
-            Text="Welcome to Healthy Lifestyle Diary"
+            Text="Bine te-am gasit Healthy Lifestyle Diary!"
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
             FontAttributes="Bold"
             FontSize="30"
             TextColor="#497FE3"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center">
+        </Label>
+
+        <Label 
+            Text="Cum a fost ziua ta?"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            FontSize="20"
+            TextColor="#497FE3"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10">
+        </Label>
         
     </VerticalStackLayout>
     

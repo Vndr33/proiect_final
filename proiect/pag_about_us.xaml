@@ -15,7 +15,7 @@
         <Label 
              Text="Vrei sa afli mai multe? Pune o intrebare!"
              FontSize="20"
-             Margin="20"
+             Margin="5"
              TextColor="#497FE3"
              VerticalOptions="Center" 
              HorizontalOptions="Center" />
