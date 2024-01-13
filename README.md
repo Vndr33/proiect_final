@@ -1,1 +1,1 @@
-Veersiunea finala a proiectului se afla pee branch-ul Master
+Versiunea finala a proiectului se afla pee branch-ul second_try
